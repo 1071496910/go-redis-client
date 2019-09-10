@@ -4,7 +4,10 @@ import (
 	"bufio"
 	"errors"
 	"net"
+	"strings"
 	"time"
+
+	"github.com/1071496910/go-redis-client/util"
 )
 
 var (
@@ -28,7 +31,7 @@ func parseRequest(b []byte) ([]byte, error) {
 	if len(b) == 0 {
 		return nil, ErrEmptyRequest
 	}
-	//strings.Split(util.String(b))
+	strings.Split(util.String(b))
 	return nil, nil
 }
 
